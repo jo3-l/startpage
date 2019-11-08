@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Time :name="name"></Time>
+    <ImageLink :link="image"></ImageLink>
+    <Dock></Dock>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { images, name } from '../config.js';
+import Dock from './components/Dock.vue';
+import ImageLink from './components/ImageLink.vue';
+import Time from './components/Time.vue';
 
 export default {
   name: 'app',
+  data() {
+    return {
+      name,
+      image: images[Math.floor(Math.random() * images.length)],
+    };
+  },
   components: {
-    HelloWorld
+    Dock,
+    ImageLink,
+    Time,
+  },
+  mounted() {
+    document.body.style.backgroundImage = `url(${this.image})`;
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background: black no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
 }
 </style>
