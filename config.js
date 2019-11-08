@@ -13,3 +13,25 @@ export const images = [
 	'https://2.bp.blogspot.com/-C8vnMOJVWRI/XIkaFbYfEcI/AAAAAAAAAgo/FIBvarQjNwwTVb5OPnpRhUjTU1lcnuQMwCKgBGAs/w0/anime-scenery-sunset-uhdpaper.com-4K-112.jpg',
 ];
 export const name = 'Joe';
+export const dock = {
+	Gmail: {
+		url: 'https://gmail.com',
+		icon: 'https://image.flaticon.com/icons/png/512/281/281769.png',
+	},
+	Discord: {
+		url: 'https://discordapp.com',
+		icon: 'https://icon-library.net/images/discord-transparent-server-icon/discord-transparent-server-icon-3.jpg',
+	},
+	Reddit: {
+		url: 'https://reddit.com',
+		icon: 'https://cdn0.iconfinder.com/data/icons/social-media-2092/100/social-36-512.png',
+	},
+	Github: {
+		url: 'https://github.com',
+		icon: 'https://cdn3.iconfinder.com/data/icons/social-media-circle/512/circle-github-512.png',
+	},
+	Hangouts: {
+		url: 'https://hangouts.google.com',
+		icon: 'https://image.flaticon.com/icons/png/512/300/300227.png',
+	},
+};
