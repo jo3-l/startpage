@@ -15,7 +15,7 @@
 <style scoped>
   .dock-item {
     float: left;
-  } 
+  }
 
   .dock-item a {
     display: block;

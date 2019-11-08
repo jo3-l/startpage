@@ -7,11 +7,10 @@ export default {
 	},
 	data() {
 		return {
-			timeHours: new Date().getHours(),
-			timeMinutes: new Date().getMinutes().toString()
-				.padStart(2, '0'),
-			greeting: (new Date().getHours() >= 20 && 'Good night') || (new Date().getHours() >= 17 && 'Good evening') || (new Date().getHours() >= 13 && 'Good afternoon') || 'Good morning',
-			date: new Date().toLocaleDateString('en-US', opts),
+			timeHours: String,
+			timeMinutes: String,
+			greeting: String,
+			date: String,
 		};
 	},
 	beforeDestroy() {
@@ -22,7 +21,7 @@ export default {
 	},
 	methods: {
 		startInterval() {
-			this._interval = setInterval(() => {
+			const interval = () => {
 				const now = new Date();
 				const hour = now.getHours();
 				const minutes = now.getMinutes();
@@ -35,7 +34,9 @@ export default {
 				this.timeMinutes = minutes.toString().padStart(2, '0');
 				this.date = now.toLocaleDateString('en-US', opts);
 				document.title = greeting;
-			});
+			};
+			interval();
+			this._interval = setInterval(interval, 1000);
 		},
 	},
 };
