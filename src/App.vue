@@ -17,7 +17,6 @@ export default {
   data() {
     return {
       name,
-      showDock: true,
       image: images[Math.floor(Math.random() * images.length)],
     };
   },
