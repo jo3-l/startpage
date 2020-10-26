@@ -1,5 +1,5 @@
 # <h1 align=center>My Startpage</h1>
-> <p align=center>Home & new tab page. View a live demo at https://joe-l.tk.</p>
+> <p align=center>Home & new tab page. View a live demo at https://jo3-l.github.io.</p>
 
 **Update 11/7/19**
 This project has been rewritten in Vue (mostly as a small project for me to learn the framework). Click [here](https://github.com/Jo3-L/jo3-L.github.io) for the plain HTML/CSS/JS version.
